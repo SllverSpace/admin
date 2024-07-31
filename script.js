@@ -9,6 +9,12 @@ var delta = 0
 
 var page = "password"
 
+let loadedPassword = localStorage.getItem("password")
+
+function savePassword(password) {
+    localStorage.setItem("password", password)
+}
+
 function update(timestamp) {
     requestAnimationFrame(update)
 

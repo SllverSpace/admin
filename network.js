@@ -35,6 +35,7 @@ function connectToServer() {
         if ("connected" in msg) {
             connected = true
             console.log("Connected")
+            if (loadedPassword) sendMsg({login: loadedPassword})
             // getViews(apps[selected])
             // getClicks(cpps[selected])
         }
